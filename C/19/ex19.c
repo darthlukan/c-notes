@@ -113,7 +113,7 @@ int Map_init(void *self)
     Room *hall = NEW(Room, "The great Hall");
     Room *throne = NEW(Room, "The throne room");
     Room *arena = NEW(Room, "The arena, with the minotaur");
-    Room *kitchen - NEW(Room, "Kitchen, you have the knife now");
+    Room *kitchen = NEW(Room, "Kitchen, you have the knife now");
 
     // put the bad guy in the arena
     arena->bad_guy = NEW(Monster, "The evil minotaur");
@@ -165,11 +165,11 @@ int process_input(Map *game)
             break;
 
         case 'e':
-            game->_(move)(game), EAST);
+            game->_(move)(game, EAST);
             break;
 
         case 'w':
-            game->_(move)(game), WEST);
+            game->_(move)(game, WEST);
             break;
 
         case 'a':
